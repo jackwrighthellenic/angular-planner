@@ -1,7 +1,14 @@
 .cards {
   display: grid;
   gap: var(--spacing);
-  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(calc((var(--gutter) / 3) - var(--spacing) * 2), 1fr)
+  );
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 
   .card-title {
     margin-top: 0;
@@ -12,6 +19,6 @@
     background-color: var(--bg-colour-l);
     border: 2px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.1);
-    border-radius: 5px;
+    border-radius: var(--radius);
   }
 }

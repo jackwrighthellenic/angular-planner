@@ -5,6 +5,12 @@
   --bg-colour: #211a1d;
   --bg-colour-l: #392d32;
   --text-colour: white;
+  --gutter: 1200px;
+  --radius: 5px;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
@@ -17,7 +23,10 @@ body {
 }
 
 main {
-  margin: 0 var(--spacing);
+  margin: 0 auto;
+  padding: 0 var(--spacing);
+  width: 100%;
+  max-width: var(--gutter);
 }
 
 h1,
@@ -34,4 +43,31 @@ h2 {
 }
 h3 {
   font-size: 2rem;
+}
+
+form {
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+
+  label {
+    display: grid;
+    grid-template-rows: auto auto;
+    margin-bottom: var(--spacing);
+  }
+}
+
+[ng-reflect-router-link],
+button {
+  cursor: pointer;
+}
+
+[type="text"],
+[type="password"],
+[type="submit"] {
+  padding: calc(var(--spacing) / 2);
+  background-color: var(--bg-colour-l);
+  color: var(--text-colour);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius);
 }

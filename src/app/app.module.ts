@@ -7,10 +7,12 @@ import { NavMenuComponent } from './shared/nav-menu/nav-menu.component';
 import { TodoCardComponent } from './shared/todo-card/todo-card.component';
 import { HomeComponent } from './routes/home/home.component';
 import { DatePipe } from './pipes/date.pipe';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { LoginComponent } from './routes/login/login.component';
 
 @NgModule({
-  declarations: [AppComponent, NavMenuComponent, TodoCardComponent, HomeComponent, DatePipe],
-  imports: [BrowserModule, AppRoutingModule],
+  declarations: [AppComponent, NavMenuComponent, TodoCardComponent, HomeComponent, DatePipe, LoginComponent],
+  imports: [BrowserModule, AppRoutingModule, FontAwesomeModule],
   providers: [Utils],
   bootstrap: [AppComponent],
 })

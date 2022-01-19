@@ -1,11 +1,17 @@
 <header>
-  <div class="logo">Planner</div>
+  <div class="logo"><span [routerLink]="['/']">Planner</span></div>
   <nav class="nav-menu">
     <ul>
-      <li class="nav-link">New</li>
-      <li class="nav-link">Edit</li>
-      <li class="nav-link">Todays</li>
+      <li class="nav-link"><fa-icon [icon]="faPlus"></fa-icon> Add</li>
+      <li class="nav-link"><fa-icon [icon]="faPen"></fa-icon> Edit</li>
+      <li class="nav-link">
+        <fa-icon [icon]="faCalendarDay"></fa-icon> Today's
+      </li>
     </ul>
   </nav>
-  <div class="login">Login</div>
+  <div class="login">
+    <span [routerLink]="['/login']">
+      <fa-icon [icon]="faSignInAlt"></fa-icon> Log in
+    </span>
+  </div>
 </header>
