@@ -1,1 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --spacing: 1rem;
+  --font-h: "Dongle", sans-serif;
+  --font-all: "Source Sans Pro", sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-all);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-h);
+}
