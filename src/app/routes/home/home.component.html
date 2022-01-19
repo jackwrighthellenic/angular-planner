@@ -1,7 +1,3 @@
 <h1>Your Todos</h1>
-<ul>
-  <app-todo-card
-    *ngFor="let card of SAMPLE_TODOS"
-    [card]="card"
-  ></app-todo-card>
-</ul>
+
+<app-todo-card [cards]="SAMPLE_TODOS"></app-todo-card>

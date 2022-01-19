@@ -6,9 +6,10 @@ import { Utils } from './services/Utils';
 import { NavMenuComponent } from './shared/nav-menu/nav-menu.component';
 import { TodoCardComponent } from './shared/todo-card/todo-card.component';
 import { HomeComponent } from './routes/home/home.component';
+import { DatePipe } from './pipes/date.pipe';
 
 @NgModule({
-  declarations: [AppComponent, NavMenuComponent, TodoCardComponent, HomeComponent],
+  declarations: [AppComponent, NavMenuComponent, TodoCardComponent, HomeComponent, DatePipe],
   imports: [BrowserModule, AppRoutingModule],
   providers: [Utils],
   bootstrap: [AppComponent],

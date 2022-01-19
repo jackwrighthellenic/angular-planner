@@ -10,7 +10,7 @@ export class HomeComponent implements OnInit {
   constructor(private utils: Utils) {}
 
   dateGenerator() {
-    return new Date(this.utils.randomRange(1627988143, 1642594183));
+    return new Date(this.utils.randomRange(1627988143000, 1642594183000));
   }
 
   SAMPLE_TODOS = [

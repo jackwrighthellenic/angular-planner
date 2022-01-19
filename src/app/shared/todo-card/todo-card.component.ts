@@ -1,14 +1,12 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-todo-card',
   templateUrl: './todo-card.component.html',
   styleUrls: ['./todo-card.component.scss'],
 })
-export class TodoCardComponent implements OnInit {
-  @Input('card') card: any = [];
-
-  ngOnInit() {}
+export class TodoCardComponent {
+  @Input() cards: Todos[] = [];
 }
 
 interface Todos {

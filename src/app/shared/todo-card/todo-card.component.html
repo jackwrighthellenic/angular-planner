@@ -1,4 +1,8 @@
-<li>
-  {{ card.title }}
-  {{ card.content }}
-</li>
+<div class="cards">
+  <div class="card" *ngFor="let card of cards">
+    <h3 class="card-title">{{ card.title }}</h3>
+    {{ card.content }}
+    {{ card.dateCreated | date }}
+    {{ card.dateUpdated | date }}
+  </div>
+</div>

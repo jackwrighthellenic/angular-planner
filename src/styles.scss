@@ -2,15 +2,36 @@
   --spacing: 1rem;
   --font-h: "Dongle", sans-serif;
   --font-all: "Source Sans Pro", sans-serif;
+  --bg-colour: #211a1d;
+  --bg-colour-l: #392d32;
+  --text-colour: white;
 }
 
 body {
+  min-height: 100vh;
+  background-color: var(--bg-colour);
   margin: 0;
   font-family: var(--font-all);
+  color: var(--text-colour);
+  font-size: 19px;
+}
+
+main {
+  margin: 0 var(--spacing);
 }
 
 h1,
 h2,
 h3 {
   font-family: var(--font-h);
+}
+
+h1 {
+  font-size: 2.8rem;
+}
+h2 {
+  font-size: 2.4rem;
+}
+h3 {
+  font-size: 2rem;
 }
