@@ -4,7 +4,9 @@ import {
   faPen,
   faPlus,
   faSignInAlt,
+  faSignOutAlt,
 } from '@fortawesome/free-solid-svg-icons';
+import { AccountService } from 'src/app/services/AccountService';
 
 @Component({
   selector: 'app-nav-menu',
@@ -12,8 +14,11 @@ import {
   styleUrls: ['./nav-menu.component.scss'],
 })
 export class NavMenuComponent {
+  constructor(public accountService: AccountService) {}
+
   faPlus = faPlus;
   faPen = faPen;
   faCalendarDay = faCalendarDay;
   faSignInAlt = faSignInAlt;
+  faSignOutAlt = faSignOutAlt;
 }

@@ -1,5 +1,11 @@
 <header>
-  <div class="logo"><span [routerLink]="['/']">Planner</span></div>
+  <div class="logo">
+    <span [routerLink]="['/']"
+      ><span *ngIf="accountService.user"
+        >{{ accountService.user.firstname }}'s </span
+      >Planner</span
+    >
+  </div>
   <nav class="nav-menu">
     <ul>
       <li class="nav-link"><fa-icon [icon]="faPlus"></fa-icon> Add</li>
@@ -10,8 +16,11 @@
     </ul>
   </nav>
   <div class="login">
-    <span [routerLink]="['/login']">
+    <span [routerLink]="['/login']" *ngIf="!accountService.user">
       <fa-icon [icon]="faSignInAlt"></fa-icon> Log in
+    </span>
+    <span (click)="accountService.logout()" *ngIf="accountService.user">
+      <fa-icon [icon]="faSignOutAlt"></fa-icon> Log out
     </span>
   </div>
 </header>

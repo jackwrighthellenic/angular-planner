@@ -64,10 +64,16 @@ button {
 
 [type="text"],
 [type="password"],
-[type="submit"] {
+[type="submit"],
+[type="button"] {
   padding: calc(var(--spacing) / 2);
   background-color: var(--bg-colour-l);
   color: var(--text-colour);
   border: 2px solid rgba(255, 255, 255, 0.1);
   border-radius: var(--radius);
+}
+
+.form-buttons {
+  display: inline-flex;
+  gap: var(--spacing);
 }
