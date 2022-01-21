@@ -16,4 +16,8 @@ export class LoginComponent {
   login(values: Account) {
     this.accountService.login(values.username, values.password);
   }
+
+  logout() {
+    this.accountService.logout();
+  }
 }

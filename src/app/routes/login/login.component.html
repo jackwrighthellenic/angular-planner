@@ -1,16 +1,16 @@
 <form #form="ngForm" (ngSubmit)="login(form.value)">
   <div>
-    <label
-      >Username: <input type="text" (ngModel)="(username)" name="username"
+    <label>
+      Username: <input type="text" (ngModel)="(username)" name="username"
     /></label>
   </div>
   <div>
-    <label
-      >Password: <input type="password" (ngModel)="(password)" name="password"
+    <label>
+      Password: <input type="password" (ngModel)="(password)" name="password"
     /></label>
   </div>
   <div class="form-buttons">
     <button type="submit">Log in</button>
-    <button type="button" (click)="accountService.logout()">Log out</button>
+    <button type="button" (ngClick)="logout()">Log out</button>
   </div>
 </form>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {
   faCalendarDay,
   faPen,
@@ -13,7 +13,7 @@ import { AccountService } from 'src/app/services/AccountService';
   templateUrl: './nav-menu.component.html',
   styleUrls: ['./nav-menu.component.scss'],
 })
-export class NavMenuComponent {
+export class NavMenuComponent implements OnInit {
   constructor(public accountService: AccountService) {}
 
   faPlus = faPlus;
@@ -21,4 +21,10 @@ export class NavMenuComponent {
   faCalendarDay = faCalendarDay;
   faSignInAlt = faSignInAlt;
   faSignOutAlt = faSignOutAlt;
+
+  ngOnInit() {
+    this.accountService.account.subscribe((deets) => {
+      console.log(deets);
+    });
+  }
 }

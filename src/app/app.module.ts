@@ -12,6 +12,8 @@ import { AuthGuard } from './services/AuthGuard';
 import { Utils } from './services/Utils';
 import { NavMenuComponent } from './shared/nav-menu/nav-menu.component';
 import { TodoCardComponent } from './shared/todo-card/todo-card.component';
+import { TodoItemComponent } from './routes/todo-item/todo-item.component';
+import { NotFoundComponent } from './routes/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import { TodoCardComponent } from './shared/todo-card/todo-card.component';
     HomeComponent,
     DatePipe,
     LoginComponent,
+    TodoItemComponent,
+    NotFoundComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FontAwesomeModule, FormsModule],
   providers: [Utils, AuthGuard, AccountService],

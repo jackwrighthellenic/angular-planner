@@ -6,9 +6,9 @@ import { Account } from './models/Account.model';
 @Injectable({ providedIn: 'root' })
 export class AccountService {
   private accountSubject: BehaviorSubject<Account | null>;
-  public account: Observable<Account | null>;
+  account: Observable<Account | null>;
 
-  FAKE_ACCOUNTS: Account[] = [
+  readonly FAKE_ACCOUNTS: Account[] = [
     {
       username: 'jackwright',
       password: 'password',
@@ -20,6 +20,12 @@ export class AccountService {
       password: 'adminpass',
       firstname: 'Admin',
       lastname: 'User',
+    },
+    {
+      username: 'a',
+      password: 'a',
+      firstname: 'A',
+      lastname: 'A',
     },
   ];
 
